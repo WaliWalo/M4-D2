@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Button } from "react-bootstrap";
+import { Jumbotron } from "react-bootstrap";
 export default class Header extends Component {
   render() {
     return (
