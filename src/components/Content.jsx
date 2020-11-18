@@ -14,43 +14,69 @@ import fantasy from "../data/fantasy.json";
 import history from "../data/history.json";
 import romance from "../data/romance.json";
 import scifi from "../data/scifi.json";
-class Contents extends Component {
+class Content extends Component {
   state = {
     category: horrors,
+    categoryString: "Category",
   };
   render() {
     return (
       <>
         <Container>
           <Row>
-            <DropdownButton id="dropdown-basic-button" title="Categories">
+            <DropdownButton
+              id="dropdown-basic-button"
+              title={this.state.categoryString}
+            >
               <Dropdown.Item
                 href="#/action-1"
-                onClick={() => this.setState({ category: horrors })}
+                onClick={() =>
+                  this.setState({
+                    category: horrors,
+                    categoryString: "Horrors",
+                  })
+                }
               >
                 Horror
               </Dropdown.Item>
               <Dropdown.Item
                 href="#/action-1"
-                onClick={() => this.setState({ category: fantasy })}
+                onClick={() =>
+                  this.setState({
+                    category: fantasy,
+                    categoryString: "Fantasy",
+                  })
+                }
               >
                 Fantasy
               </Dropdown.Item>
               <Dropdown.Item
                 href="#/action-2"
-                onClick={() => this.setState({ category: history })}
+                onClick={() =>
+                  this.setState({
+                    category: history,
+                    categoryString: "History",
+                  })
+                }
               >
                 History
               </Dropdown.Item>
               <Dropdown.Item
                 href="#/action-3"
-                onClick={() => this.setState({ category: romance })}
+                onClick={() =>
+                  this.setState({
+                    category: romance,
+                    categoryString: "Romance",
+                  })
+                }
               >
                 Romance
               </Dropdown.Item>
               <Dropdown.Item
                 href="#/action-3"
-                onClick={() => this.setState({ category: scifi })}
+                onClick={() =>
+                  this.setState({ category: scifi, categoryString: "Sci-Fi" })
+                }
               >
                 Sci-fi
               </Dropdown.Item>
@@ -84,4 +110,4 @@ class Contents extends Component {
   }
 }
 
-export default Contents;
+export default Content;
